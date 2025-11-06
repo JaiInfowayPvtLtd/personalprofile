@@ -1,0 +1,66 @@
+export interface Publication {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  publisher: string;
+  date: string;
+  type: 'blog' | 'press' | 'article' | 'research';
+  tags?: string[];
+  image?: string;
+}
+
+export const publications: Publication[] = [
+  {
+    id: '1',
+    title: 'How Does Cloud Enable the Transformation of Dispute Management in Banking?',
+    description: 'An in-depth exploration of cloud-native architectures transforming dispute management processes in the banking sector, reducing resolution times and improving customer satisfaction.',
+    url: 'https://aws.amazon.com/blogs/industries/how-does-cloud-enable-the-transformation-of-dispute-management-in-banking/',
+    publisher: 'AWS Industries Blog',
+    date: '2024',
+    type: 'blog',
+    tags: ['Cloud', 'Banking', 'Dispute Management', 'AWS', 'Digital Transformation']
+  },
+  {
+    id: '2',
+    title: 'Eight Game-Changing Products in Four Years Prove Digital Banking is Just Getting Started',
+    description: 'A showcase of groundbreaking innovations in digital banking, highlighting the rapid evolution of financial technology and customer-centric product development.',
+    url: 'https://english.newsnationtv.com/brand-stories/brand-stories-english/eight-game-changing-products-in-four-years-prove-digital-banking-is-just-getting-started-9687573',
+    publisher: 'News Nation',
+    date: '2024',
+    type: 'press',
+    tags: ['Digital Banking', 'Innovation', 'Product Development', 'FinTech']
+  },
+  {
+    id: '3',
+    title: 'Data Architects Lead Banking\'s Digital Revolution While Competitors Watch From The Sidelines',
+    description: 'A profile exploring how data architects are driving banking\'s digital transformation through cloud migration and AI solutions, generating substantial revenue gains and operational efficiencies.',
+    url: 'https://www.freepressjournal.in/latest-news/data-architects-lead-bankings-digital-revolution-while-competitors-watch-from-the-sidelines',
+    publisher: 'Free Press Journal',
+    date: 'June 2025',
+    type: 'press',
+    tags: ['Data Architecture', 'Banking', 'Digital Transformation', 'Cloud Migration', 'AI']
+  },
+  // Add more publications here following the same structure
+  // Example:
+  // {
+  //   id: '3',
+  //   title: 'Your Article Title',
+  //   description: 'Brief description of the article',
+  //   url: 'https://example.com/article',
+  //   publisher: 'Publisher Name',
+  //   date: 'YYYY',
+  //   type: 'blog',
+  //   tags: ['Tag1', 'Tag2']
+  // },
+];
+
+// Helper function to get publications by type
+export const getPublicationsByType = (type: Publication['type']) => {
+  return publications.filter(pub => pub.type === type);
+};
+
+// Helper function to get recent publications
+export const getRecentPublications = (limit: number = 6) => {
+  return publications.slice(0, limit);
+};
