@@ -71,6 +71,16 @@ export const publications: Publication[] = [
     type: 'press',
     tags: ['Healthcare', 'Medicare', 'Claims Processing', 'Platform Architecture', 'AI/ML', 'Digital Health']
   },
+  {
+    id: '7',
+    title: 'AI Chatbots Are Just the Start—The Tech Behind the Next Wave of Customer Service',
+    description: 'An exploration of the advanced technologies powering the future of customer service beyond basic chatbots, including AI-driven personalization, predictive analytics, and omnichannel experiences that redefine customer engagement and satisfaction.',
+    url: 'https://www.thehansindia.com/news/business/ai-chatbots-are-just-the-startthe-tech-behind-the-next-wave-of-customer-service-966688',
+    publisher: 'The Hans India',
+    date: '2024',
+    type: 'press',
+    tags: ['AI Chatbots', 'Customer Service', 'Generative AI', 'Personalization', 'Customer Experience', 'Digital Innovation']
+  },
   // Add more publications here following the same structure
   // Example:
   // {
