@@ -51,6 +51,16 @@ export const publications: Publication[] = [
     type: 'press',
     tags: ['Generative AI', 'Banking', 'Revenue Growth', 'Personalization', 'AI/ML', 'Financial Services']
   },
+  {
+    id: '5',
+    title: 'Adarsh Naidu: How Housing Apps Benefiting from Next-Gen Platform Migrations',
+    description: 'An insightful analysis of how Adarsh Naidu leads next-generation platform migrations for housing applications, modernizing infrastructure and enabling scalable, efficient solutions that transform the real estate technology landscape.',
+    url: 'https://www.outlookindia.com/hub4business/adarsh-naidu-how-housing-apps-benefiting-from-next-gen-platform-migrations',
+    publisher: 'Outlook India',
+    date: '2024',
+    type: 'press',
+    tags: ['Platform Migration', 'Housing Apps', 'Real Estate Tech', 'Cloud Migration', 'Modernization', 'Digital Transformation']
+  },
   // Add more publications here following the same structure
   // Example:
   // {
