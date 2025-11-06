@@ -61,6 +61,16 @@ export const publications: Publication[] = [
     type: 'press',
     tags: ['Platform Migration', 'Housing Apps', 'Real Estate Tech', 'Cloud Migration', 'Modernization', 'Digital Transformation']
   },
+  {
+    id: '6',
+    title: 'How Adarsh Naidu Led a Next-Gen Medicare Platform to Transform Healthcare Claims',
+    description: 'A comprehensive look at how Adarsh Naidu architected and led the development of a next-generation Medicare platform, revolutionizing healthcare claims processing with advanced automation, AI-driven analytics, and improved patient outcomes.',
+    url: 'https://www.oneindia.com/in-the-news/how-adarsh-naidu-led-a-next-gen-medicare-platform-to-transform-healthcare-claims-7821201.html',
+    publisher: 'OneIndia',
+    date: '2024',
+    type: 'press',
+    tags: ['Healthcare', 'Medicare', 'Claims Processing', 'Platform Architecture', 'AI/ML', 'Digital Health']
+  },
   // Add more publications here following the same structure
   // Example:
   // {
