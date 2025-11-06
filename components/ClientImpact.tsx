@@ -179,11 +179,11 @@ export default function ClientImpact() {
       icon: Building2,
       client: "Amazon Web Services",
       title: "AWS Banking & AI Transformations",
-      situation: awsStories[awsSubTab].situation,
-      task: awsStories[awsSubTab].task,
-      action: awsStories[awsSubTab].action,
-      result: awsStories[awsSubTab].result,
-      metrics: awsStories[awsSubTab].metrics
+      situation: awsSubTab === 2 ? "" : awsStories[awsSubTab].situation,
+      task: awsSubTab === 2 ? "" : awsStories[awsSubTab].task,
+      action: awsSubTab === 2 ? [] : awsStories[awsSubTab].action,
+      result: awsSubTab === 2 ? "" : awsStories[awsSubTab].result,
+      metrics: awsSubTab === 2 ? [] : awsStories[awsSubTab].metrics
     },
     {
       icon: TrendingUp,
