@@ -69,38 +69,6 @@ export default function ClientImpact() {
     },
     projects: [
       {
-        project: "Generative AI Platform Suite",
-        client: "Financial Services (Multi-Client)",
-        situation: "Financial institutions needed enterprise-grade GenAI capabilities for code generation, analytics, customer service, and risk management while maintaining regulatory compliance and data security.",
-        task: "Architect and deploy suite of advanced GenAI and ML-powered platforms including code-generation assistants, post-call analytics, enterprise Q&A, automated claims handling, email triage, predictive lead-scoring, economic sentiment pipelines, and risk management chatbots.",
-        action: "Built scalable LLM Suite platform serving 20,000+ employees, implemented responsible AI framework with SDLC integration, deployed 150+ production use cases across customer engagement, operations, and risk domains, established governance for prompt engineering and model lifecycle",
-        result: "80% reduction in research time | $20-40M annual value | $10M+ in incremental sales | 400+ POCs active | Set new standards for efficiency and compliance in financial services"
-      },
-      {
-        project: "Responsible AI Framework",
-        client: "AWS Financial Services Practice",
-        situation: "Growing adoption of GenAI in regulated financial services required comprehensive framework for responsible AI implementation throughout application lifecycle.",
-        task: "Develop AWS point of view for Responsible AI implementation across generative AI application lifecycle, including special SDLC and Agile phase considerations for strategic and tactical advantage.",
-        action: "Created RAI framework integrated into each SDLC phase, developed governance model for AI ethics and compliance, presented thought leadership at 23 events across US (2023-2025), published best practices for financial services RAI",
-        result: "Industry-leading RAI framework | 23 thought leadership presentations | Adoption across 10+ major financial institutions | Regulatory acceptance from OCC, Fed, FDIC"
-      },
-      {
-        project: "Financial Services Data Lake Strategy",
-        client: "10+ Large Financial Institutions",
-        situation: "Fragmented data sets and silos across organizations prevented effective Business Intelligence and AI/ML improvements, limiting ability to leverage data for competitive advantage.",
-        task: "Develop comprehensive Data Lake strategy to consolidate fragmented data, prepare for BI and AI/ML, deliver board-level presentations, and track progress to production.",
-        action: "Led data strategy for 10+ customers with board-level engagement, architected unified data lakes consolidating transaction, customer, risk, and market data, established data governance and quality frameworks, enabled real-time data access for AI/ML workloads",
-        result: "$3+ Million in services revenue | 10+ data lakes in production | Foundation for 150+ AI use cases | 50% reduction in time-to-insight"
-      },
-      {
-        project: "Enterprise Data Mesh Architecture",
-        client: "Southeast US & Enterprise Accounts",
-        situation: "Traditional centralized data warehouses struggled to scale for enterprise needs, causing bottlenecks in data access, quality issues, and slow delivery of data products.",
-        task: "Regional lead for US Southeast and Enterprise accounts to improve customer experience on AWS Data Warehousing and Data Lakes using Data Mesh principles. Lead team of solutions architects to accelerate POCs.",
-        action: "Implemented domain-oriented data ownership model, built self-serve data infrastructure platform, established federated data governance, deployed data product thinking across 15+ business domains, accelerated POC delivery by 60%",
-        result: "15+ domain data products launched | 60% faster POC delivery | Improved data quality and discoverability | Enabled decentralized data innovation"
-      },
-      {
         project: "Code Generation AI Assistants",
         client: "Liberty Mutual, Victory Capital, SoFi",
         situation: "Development teams spending 40-60% of time on boilerplate code, documentation, and debugging, slowing feature delivery and innovation velocity.",
@@ -155,6 +123,14 @@ export default function ClientImpact() {
         task: "Deploy conversational AI chatbot for natural language querying of risk databases, automated report generation, and compliance monitoring.",
         action: "Built chatbot with SQL generation capabilities, integrated with enterprise risk data warehouse, implemented automated report generation, established audit trail for compliance",
         result: "85% reduction in report generation time | Natural language access to risk data | Real-time compliance monitoring | $3M annual productivity value"
+      },
+      {
+        project: "GenAI Client Summaries & 401k Chatbot",
+        client: "Vanguard Financial Advisor Services",
+        situation: "50,000+ advisory firms with 150,000+ financial advisors needed efficient ways to create personalized client communications and answer complex 401k plan questions. Advisors spent hours manually customizing market perspectives and researching retirement plan details, limiting time for high-value services like behavioral coaching and financial planning.",
+        task: "Architect and deploy Vanguard's first client-facing Generative AI capability: Client-Ready Article Summaries for personalized content generation and 401k Summarization Chatbot for instant plan guidance, enabling advisors to focus on higher-value client interactions.",
+        action: "Built GenAI platform producing customizable synopses of top-read market perspectives tailored by financial acumen, investing life stage, and tone. Automated disclosure generation for compliance. Deployed 401k chatbot with RAG architecture accessing plan documents, contribution limits, distribution rules, and tax implications. Implemented responsible AI framework with beta testing across advisor community. Integrated with existing advisor technology stack for seamless workflow.",
+        result: "150,000 advisors enabled with AI toolkit | Significant time savings in content creation and research | Hyper-personalized client communications at scale | Enhanced advisor-client relationships | Foundation for expanding AI capabilities across advisor-relevant content | Beta tested with plans for broader technology rollout"
       }
     ]
   };

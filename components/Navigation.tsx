@@ -18,7 +18,7 @@ export default function Navigation() {
   const navLinks = [
     { href: "#about", label: "About" },
     { href: "#achievements", label: "Achievements" },
-    { href: "#data-strategy", label: "Data Strategy" },
+    { href: "#data-strategy", label: "Strategy" },
     { href: "#client-impact", label: "Client Impact" },
     { href: "#experience", label: "Experience" },
     { href: "#skills", label: "Skills" },
