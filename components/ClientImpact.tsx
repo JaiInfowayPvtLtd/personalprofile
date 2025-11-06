@@ -5,7 +5,7 @@ import { Building2, TrendingUp, Lightbulb, Cloud } from "lucide-react";
 
 export default function ClientImpact() {
   const [activeTab, setActiveTab] = useState(0);
-  const [awsSubTab, setAwsSubTab] = useState(0); // 0 = BankUnited, 1 = First Citizens Bank, 2 = Transformation at Scale
+  const [awsSubTab, setAwsSubTab] = useState(0); // 0 = BankUnited, 1 = First Citizens Bank
   const [amexSubTab, setAmexSubTab] = useState(0); // 0 = main story, 1 = roadmap, 2 = TOGAF
   const [assurantSubTab, setAssurantSubTab] = useState(0); // 0 = main story, 1 = TOGAF
 
@@ -57,133 +57,16 @@ export default function ClientImpact() {
     }
   ];
 
-  const transformationAtScale = {
-    title: "AWS Banking Transformation at Scale - Executive Brief",
-    overview: "Led comprehensive cloud and AI transformation initiatives across 9 major financial institutions, driving $500M+ in business value through strategic AWS investments, partner ecosystem orchestration, and value-mapped technology runway execution.",
-    clients: [
-      { name: "BankUnited", segment: "Regional Bank", assets: "$35B AUM" },
-      { name: "SoFi", segment: "Digital Bank", assets: "$20B+ Lending" },
-      { name: "ACI Worldwide", segment: "Payments Infrastructure", assets: "$6T Annual Volume" },
-      { name: "First Citizens Bank", segment: "Top 20 US Bank", assets: "$200B+ AUM" },
-      { name: "Cardinal Finance", segment: "Consumer Finance", assets: "$10B+ Portfolio" },
-      { name: "Victory Capital", segment: "Asset Management", assets: "$175B AUM" },
-      { name: "Liberty Mutual", segment: "Insurance", assets: "$125B Assets" },
-      { name: "Park National Bank", segment: "Community Bank", assets: "$10B AUM" },
-      { name: "Robinhood", segment: "FinTech Platform", assets: "30M+ Users" }
-    ],
-    investmentStrategy: [
-      {
-        phase: "Strategic Assessment",
-        duration: "Weeks 1-4",
-        activities: "Business case development, current state analysis, cloud maturity assessment, regulatory requirements (OCC, Fed, FDIC), ROI modeling",
-        awsInvestment: "AWS MAP (Migration Acceleration Program) funding assessment, AWS credits negotiation ($500K-$2M per client)",
-        deliverables: "Cloud business case, 3-year TCO analysis, executive readiness report"
-      },
-      {
-        phase: "Architecture & Planning",
-        duration: "Weeks 5-12",
-        activities: "Landing zone design (AWS Control Tower), security baseline (NIST CSF, CIS AWS Foundations), compliance framework (PCI-DSS, SOC2, SR 11-7), partner selection",
-        awsInvestment: "AWS ProServe engagement ($200K-$500K), AWS Partner Network (APN) co-funding",
-        deliverables: "Reference architecture, migration wave planning, risk mitigation strategy"
-      },
-      {
-        phase: "Pilot & Validation",
-        duration: "Weeks 13-24",
-        activities: "Wave 1 migration (non-critical workloads), DR/BC validation, security penetration testing, cost optimization baseline",
-        awsInvestment: "AWS MAP migration funding (30-50% of migration costs), Reserved Instance strategy",
-        deliverables: "Pilot success metrics, lessons learned, scaled execution plan"
-      },
-      {
-        phase: "Scale Execution",
-        duration: "Months 7-18",
-        activities: "Multi-wave migration (300-500 applications), data platform modernization (S3, Redshift, EMR), AI/ML enablement (SageMaker, Bedrock)",
-        awsInvestment: "Enterprise Discount Program (EDP) negotiations (20-30% discounts), Savings Plans optimization",
-        deliverables: "Production workloads on AWS, decommissioned legacy infrastructure, realized cost savings"
-      },
-      {
-        phase: "Optimization & Innovation",
-        duration: "Months 19-36",
-        activities: "FinOps continuous optimization, GenAI use case development (fraud detection, customer service, risk modeling), serverless adoption",
-        awsInvestment: "AWS Innovation funding for GenAI POCs ($100K-$300K), AWS Marketplace third-party solutions",
-        deliverables: "20-30% cost reduction, AI-driven business capabilities, cloud center of excellence"
-      }
-    ],
-    partnerEcosystem: [
-      { partner: "AWS ProServe", role: "Strategic Advisory", engagement: "Architecture design, migration strategy, Well-Architected reviews" },
-      { partner: "APN Premier Partners", role: "Migration Execution", engagement: "Accenture, Deloitte, Capgemini for large-scale migrations (1000+ apps)" },
-      { partner: "ISV Partners", role: "Solution Integration", engagement: "Datadog (observability), Snowflake (data), MongoDB Atlas (databases), HashiCorp (IaC)" },
-      { partner: "Managed Services", role: "24/7 Operations", engagement: "AWS Managed Services (AMS) or partner MSPs for production support" },
-      { partner: "Training Partners", role: "Skill Development", engagement: "AWS Training & Certification (500-1000 engineers trained per client)" }
-    ],
-    valueMap: [
-      {
-        businessOutcome: "Revenue Growth",
-        technologyEnablers: "Real-time data analytics (S3, Athena, QuickSight), AI/ML personalization (SageMaker), API monetization (API Gateway)",
-        metrics: "$50M-$200M incremental revenue per client",
-        timeline: "12-24 months",
-        examples: "BankUnited deposit growth, SoFi loan origination automation, Robinhood trading features"
-      },
-      {
-        businessOutcome: "Cost Reduction",
-        technologyEnablers: "Infrastructure consolidation (EC2 rightsizing, RDS optimization), data center exit, serverless adoption (Lambda, Fargate)",
-        metrics: "25-40% infrastructure cost savings ($10M-$50M annually)",
-        timeline: "6-18 months",
-        examples: "Liberty Mutual data center exit, Victory Capital compute optimization, Park National server consolidation"
-      },
-      {
-        businessOutcome: "Operational Efficiency",
-        technologyEnablers: "CI/CD automation (CodePipeline, CodeDeploy), IaC (CloudFormation, Terraform), observability (CloudWatch, X-Ray)",
-        metrics: "60% faster time-to-market, 50% reduction in manual ops",
-        timeline: "9-18 months",
-        examples: "ACI Worldwide payment processing modernization, Cardinal Finance deployment automation"
-      },
-      {
-        businessOutcome: "Risk & Compliance",
-        technologyEnablers: "Compliance automation (Config, Security Hub, GuardDuty), encryption (KMS), audit logging (CloudTrail)",
-        metrics: "Zero critical audit findings, 99.99% uptime SLA",
-        timeline: "6-12 months",
-        examples: "First Citizens Bank GenAI governance, BankUnited regulatory compliance (OCC, Fed)"
-      },
-      {
-        businessOutcome: "Customer Experience",
-        technologyEnablers: "Real-time fraud detection (SageMaker), GenAI chatbots (Bedrock), low-latency APIs (CloudFront, DynamoDB)",
-        metrics: "40% reduction in fraud losses, 30% improvement in NPS",
-        timeline: "12-24 months",
-        examples: "SoFi mobile app modernization, Robinhood real-time trading, Liberty Mutual claims automation"
-      },
-      {
-        businessOutcome: "Innovation Velocity",
-        technologyEnablers: "GenAI platform (Bedrock, SageMaker), data lakehouse (S3 + Athena), event-driven architecture (EventBridge, SNS)",
-        metrics: "10x faster experimentation, 50+ AI/ML models in production",
-        timeline: "18-36 months",
-        examples: "Victory Capital investment analytics, Cardinal Finance credit risk modeling, ACI fraud prevention"
-      }
-    ],
-    technologyRunway: [
-      { year: "Year 1", focus: "Foundation", initiatives: "Landing zone, security baseline, wave 1-3 migrations (100-200 apps), data lake POC", awsServices: "Control Tower, Organizations, EC2, RDS, S3, VPC" },
-      { year: "Year 2", focus: "Modernization", initiatives: "Container adoption (ECS/EKS), serverless pilots (Lambda), data platform (Redshift, EMR), AI/ML platform (SageMaker)", awsServices: "EKS, Lambda, Redshift, SageMaker, API Gateway" },
-      { year: "Year 3", focus: "Innovation", initiatives: "GenAI use cases (Bedrock), real-time streaming (Kinesis, MSK), multi-region DR, FinOps optimization", awsServices: "Bedrock, Kinesis, MSK, Cost Explorer, Savings Plans" }
-    ],
-    aggregateImpact: {
-      totalClients: "9 financial institutions",
-      totalValue: "$500M+ in business value (revenue growth + cost savings)",
-      awsSpend: "$200M+ annual AWS consumption across portfolio",
-      workloadsMigrated: "2000+ applications migrated to AWS",
-      engineersTrained: "5000+ cloud certifications achieved",
-      timeline: "2020-2025 (5-year transformation journey)"
-    }
-  };
-
   const impactStories = [
     {
       icon: Building2,
       client: "Amazon Web Services",
       title: "AWS Banking & AI Transformations",
-      situation: awsSubTab === 2 ? "" : awsStories[awsSubTab].situation,
-      task: awsSubTab === 2 ? "" : awsStories[awsSubTab].task,
-      action: awsSubTab === 2 ? [] : awsStories[awsSubTab].action,
-      result: awsSubTab === 2 ? "" : awsStories[awsSubTab].result,
-      metrics: awsSubTab === 2 ? [] : awsStories[awsSubTab].metrics
+      situation: awsStories[awsSubTab].situation,
+      task: awsStories[awsSubTab].task,
+      action: awsStories[awsSubTab].action,
+      result: awsStories[awsSubTab].result,
+      metrics: awsStories[awsSubTab].metrics
     },
     {
       icon: TrendingUp,
@@ -679,16 +562,6 @@ export default function ClientImpact() {
               >
                 First Citizens Bank - Cloud & AI
               </button>
-              <button
-                onClick={() => setAwsSubTab(2)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
-                  awsSubTab === 2
-                    ? "bg-executive-gold/20 text-executive-gold border border-executive-gold/50"
-                    : "bg-white/5 text-white/60 border border-white/10 hover:bg-white/10"
-                }`}
-              >
-                Transformation at Scale
-              </button>
             </div>
           )}
 
@@ -755,7 +628,7 @@ export default function ClientImpact() {
           )}
 
           {/* STAR Content - Main Story */}
-          {((activeTab === 0 && awsSubTab !== 2) || (activeTab === 1 && assurantSubTab === 0) || (activeTab === 2 && amexSubTab === 0)) && (
+          {((activeTab === 0) || (activeTab === 1 && assurantSubTab === 0) || (activeTab === 2 && amexSubTab === 0)) && (
             <div className="space-y-6">
             {/* Situation */}
             <div>
@@ -804,180 +677,6 @@ export default function ClientImpact() {
               <p className="text-white/90 leading-relaxed font-semibold">{currentStory.result}</p>
             </div>
           </div>
-          )}
-
-          {/* AWS Transformation at Scale Content */}
-          {activeTab === 0 && awsSubTab === 2 && (
-            <div className="space-y-8">
-              {/* Executive Brief Header */}
-              <div className="text-center mb-8">
-                <h4 className="text-3xl font-bold text-executive-gold mb-3">{transformationAtScale.title}</h4>
-                <p className="text-white/80 text-base leading-relaxed max-w-4xl mx-auto">{transformationAtScale.overview}</p>
-              </div>
-
-              {/* Aggregate Impact Metrics */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-                <div className="glass-card text-center">
-                  <div className="text-2xl font-bold gold-accent mb-1">{transformationAtScale.aggregateImpact.totalClients.split(' ')[0]}</div>
-                  <div className="text-xs text-white/60">Financial Institutions</div>
-                </div>
-                <div className="glass-card text-center">
-                  <div className="text-2xl font-bold gold-accent mb-1">{transformationAtScale.aggregateImpact.totalValue.split(' ')[0]}</div>
-                  <div className="text-xs text-white/60">Business Value</div>
-                </div>
-                <div className="glass-card text-center">
-                  <div className="text-2xl font-bold gold-accent mb-1">{transformationAtScale.aggregateImpact.awsSpend.split(' ')[0]}</div>
-                  <div className="text-xs text-white/60">Annual AWS Spend</div>
-                </div>
-                <div className="glass-card text-center">
-                  <div className="text-2xl font-bold gold-accent mb-1">{transformationAtScale.aggregateImpact.workloadsMigrated.split(' ')[0]}</div>
-                  <div className="text-xs text-white/60">Apps Migrated</div>
-                </div>
-                <div className="glass-card text-center">
-                  <div className="text-2xl font-bold gold-accent mb-1">{transformationAtScale.aggregateImpact.engineersTrained.split(' ')[0]}</div>
-                  <div className="text-xs text-white/60">Cloud Certified</div>
-                </div>
-                <div className="glass-card text-center">
-                  <div className="text-2xl font-bold gold-accent mb-1">{transformationAtScale.aggregateImpact.timeline.split(' ')[0]}</div>
-                  <div className="text-xs text-white/60">Transformation</div>
-                </div>
-              </div>
-
-              {/* Client Portfolio */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <h5 className="text-xl font-bold text-executive-gold mb-4">Client Portfolio</h5>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-white/20">
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Client</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Segment</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Assets/Scale</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {transformationAtScale.clients.map((client, idx) => (
-                        <tr key={idx} className="border-b border-white/10 hover:bg-white/5 transition-colors">
-                          <td className="py-3 px-4 text-white font-semibold text-sm">{client.name}</td>
-                          <td className="py-3 px-4 text-white/70 text-sm">{client.segment}</td>
-                          <td className="py-3 px-4 text-white/70 text-sm">{client.assets}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              {/* AWS Investment Strategy */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <h5 className="text-xl font-bold text-executive-gold mb-4">AWS Investment & Execution Strategy</h5>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-white/20">
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Phase</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Duration</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Activities</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">AWS Investment</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Deliverables</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {transformationAtScale.investmentStrategy.map((phase, idx) => (
-                        <tr key={idx} className="border-b border-white/10 hover:bg-white/5 transition-colors">
-                          <td className="py-4 px-4 text-white font-semibold text-sm">{phase.phase}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{phase.duration}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{phase.activities}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{phase.awsInvestment}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{phase.deliverables}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              {/* Partner Ecosystem */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <h5 className="text-xl font-bold text-executive-gold mb-4">Partner Ecosystem & Programs</h5>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-white/20">
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Partner</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Role</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Engagement</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {transformationAtScale.partnerEcosystem.map((partner, idx) => (
-                        <tr key={idx} className="border-b border-white/10 hover:bg-white/5 transition-colors">
-                          <td className="py-3 px-4 text-white font-semibold text-sm">{partner.partner}</td>
-                          <td className="py-3 px-4 text-white/70 text-sm">{partner.role}</td>
-                          <td className="py-3 px-4 text-white/70 text-sm">{partner.engagement}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              {/* Value Map */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <h5 className="text-xl font-bold text-executive-gold mb-4">Value Map - Technology to Business Outcomes</h5>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-white/20">
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Business Outcome</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Technology Enablers</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Metrics</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Timeline</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Client Examples</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {transformationAtScale.valueMap.map((value, idx) => (
-                        <tr key={idx} className="border-b border-white/10 hover:bg-white/5 transition-colors">
-                          <td className="py-4 px-4 text-white font-semibold text-sm">{value.businessOutcome}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{value.technologyEnablers}</td>
-                          <td className="py-4 px-4 text-executive-gold text-sm font-semibold">{value.metrics}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{value.timeline}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{value.examples}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              {/* Technology Runway */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <h5 className="text-xl font-bold text-executive-gold mb-4">3-Year Technology Runway</h5>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-white/20">
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Year</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Focus</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Initiatives</th>
-                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">AWS Services</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {transformationAtScale.technologyRunway.map((runway, idx) => (
-                        <tr key={idx} className="border-b border-white/10 hover:bg-white/5 transition-colors">
-                          <td className="py-4 px-4 text-white font-semibold text-sm">{runway.year}</td>
-                          <td className="py-4 px-4 text-executive-gold text-sm font-semibold">{runway.focus}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{runway.initiatives}</td>
-                          <td className="py-4 px-4 text-white/70 text-sm">{runway.awsServices}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
           )}
 
           {/* Assurant TOGAF ADM Content */}
@@ -1270,7 +969,7 @@ export default function ClientImpact() {
           )}
 
           {/* Key Metrics */}
-          {((activeTab === 0 && awsSubTab !== 2) || (activeTab === 1 && assurantSubTab === 0) || (activeTab === 2 && amexSubTab === 0)) && (
+          {((activeTab === 0) || (activeTab === 1 && assurantSubTab === 0) || (activeTab === 2 && amexSubTab === 0)) && (
           <div className="mt-8 pt-6 border-t border-white/10">
             <div className="grid grid-cols-3 gap-6">
               {currentStory.metrics.map((metric, idx) => (
