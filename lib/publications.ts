@@ -41,6 +41,16 @@ export const publications: Publication[] = [
     type: 'press',
     tags: ['Data Architecture', 'Banking', 'Digital Transformation', 'Cloud Migration', 'AI']
   },
+  {
+    id: '4',
+    title: 'Generative AI Transforms Banking: Adarsh Naidu Drives Massive Revenue Growth and Hyper-Personalization Across Global Finance',
+    description: 'Exploring how Adarsh Naidu leverages generative AI to revolutionize banking operations, driving significant revenue growth and delivering hyper-personalized customer experiences across major financial institutions worldwide.',
+    url: 'https://www.mid-day.com/buzz/article/generative-ai-transforms-banking-adarsh-naidu-drives-massive-revenue-growth-and-hyper-personalization-across-global-finance-6639',
+    publisher: 'Mid-Day',
+    date: '2024',
+    type: 'press',
+    tags: ['Generative AI', 'Banking', 'Revenue Growth', 'Personalization', 'AI/ML', 'Financial Services']
+  },
   // Add more publications here following the same structure
   // Example:
   // {
