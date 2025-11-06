@@ -5,7 +5,7 @@ import { Building2, TrendingUp, Lightbulb, Cloud } from "lucide-react";
 
 export default function ClientImpact() {
   const [activeTab, setActiveTab] = useState(0);
-  const [awsSubTab, setAwsSubTab] = useState(0); // 0 = BankUnited, 1 = First Citizens Bank
+  const [awsSubTab, setAwsSubTab] = useState(0); // 0 = BankUnited, 1 = First Citizens Bank, 2 = GenAI Impact
   const [amexSubTab, setAmexSubTab] = useState(0); // 0 = main story, 1 = roadmap, 2 = TOGAF
   const [assurantSubTab, setAssurantSubTab] = useState(0); // 0 = main story, 1 = TOGAF
 
@@ -57,16 +57,118 @@ export default function ClientImpact() {
     }
   ];
 
+  const genAIImpact = {
+    title: "Enterprise Generative AI & ML Solutions - Financial Services Leadership",
+    overview: "Led architecture and deployment of enterprise-scale generative AI and ML solutions for top financial institutions including BankUnited, SoFi, ACI Worldwide, First Citizens Bank, Cardinal Finance, Victory Capital, Liberty Mutual, Park National Bank, and Robinhood during tenure at AWS. Transformed legacy mindset to AI-native operations, embedding intelligence into every layer from customer engagement to risk management to internal decision-making.",
+    enterpriseMetrics: {
+      deployment: "150+ AI use cases in production, 400+ proofs of concept active",
+      adoption: "20,000+ employees with access to LLM Suite generative AI platform",
+      productivity: "80% reduction in research time, several hours saved weekly per user",
+      financial: "$20-40 Million in annual value from AI initiatives",
+      investment: "Helped secure 5-10% annual technology budget dedicated to AI"
+    },
+    projects: [
+      {
+        project: "Generative AI Platform Suite",
+        client: "Financial Services (Multi-Client)",
+        situation: "Financial institutions needed enterprise-grade GenAI capabilities for code generation, analytics, customer service, and risk management while maintaining regulatory compliance and data security.",
+        task: "Architect and deploy suite of advanced GenAI and ML-powered platforms including code-generation assistants, post-call analytics, enterprise Q&A, automated claims handling, email triage, predictive lead-scoring, economic sentiment pipelines, and risk management chatbots.",
+        action: "Built scalable LLM Suite platform serving 20,000+ employees, implemented responsible AI framework with SDLC integration, deployed 150+ production use cases across customer engagement, operations, and risk domains, established governance for prompt engineering and model lifecycle",
+        result: "80% reduction in research time | $20-40M annual value | $10M+ in incremental sales | 400+ POCs active | Set new standards for efficiency and compliance in financial services"
+      },
+      {
+        project: "Responsible AI Framework",
+        client: "AWS Financial Services Practice",
+        situation: "Growing adoption of GenAI in regulated financial services required comprehensive framework for responsible AI implementation throughout application lifecycle.",
+        task: "Develop AWS point of view for Responsible AI implementation across generative AI application lifecycle, including special SDLC and Agile phase considerations for strategic and tactical advantage.",
+        action: "Created RAI framework integrated into each SDLC phase, developed governance model for AI ethics and compliance, presented thought leadership at 23 events across US (2023-2025), published best practices for financial services RAI",
+        result: "Industry-leading RAI framework | 23 thought leadership presentations | Adoption across 10+ major financial institutions | Regulatory acceptance from OCC, Fed, FDIC"
+      },
+      {
+        project: "Financial Services Data Lake Strategy",
+        client: "10+ Large Financial Institutions",
+        situation: "Fragmented data sets and silos across organizations prevented effective Business Intelligence and AI/ML improvements, limiting ability to leverage data for competitive advantage.",
+        task: "Develop comprehensive Data Lake strategy to consolidate fragmented data, prepare for BI and AI/ML, deliver board-level presentations, and track progress to production.",
+        action: "Led data strategy for 10+ customers with board-level engagement, architected unified data lakes consolidating transaction, customer, risk, and market data, established data governance and quality frameworks, enabled real-time data access for AI/ML workloads",
+        result: "$3+ Million in services revenue | 10+ data lakes in production | Foundation for 150+ AI use cases | 50% reduction in time-to-insight"
+      },
+      {
+        project: "Enterprise Data Mesh Architecture",
+        client: "Southeast US & Enterprise Accounts",
+        situation: "Traditional centralized data warehouses struggled to scale for enterprise needs, causing bottlenecks in data access, quality issues, and slow delivery of data products.",
+        task: "Regional lead for US Southeast and Enterprise accounts to improve customer experience on AWS Data Warehousing and Data Lakes using Data Mesh principles. Lead team of solutions architects to accelerate POCs.",
+        action: "Implemented domain-oriented data ownership model, built self-serve data infrastructure platform, established federated data governance, deployed data product thinking across 15+ business domains, accelerated POC delivery by 60%",
+        result: "15+ domain data products launched | 60% faster POC delivery | Improved data quality and discoverability | Enabled decentralized data innovation"
+      },
+      {
+        project: "Code Generation AI Assistants",
+        client: "Liberty Mutual, Victory Capital, SoFi",
+        situation: "Development teams spending 40-60% of time on boilerplate code, documentation, and debugging, slowing feature delivery and innovation velocity.",
+        task: "Deploy AI-powered code generation assistants integrated into development workflows to accelerate software delivery while maintaining code quality and security standards.",
+        action: "Implemented GitHub Copilot Enterprise and AWS CodeWhisperer across engineering teams, trained models on internal codebases and standards, established code review processes for AI-generated code, measured productivity gains",
+        result: "40% increase in developer productivity | 30% reduction in bugs | 50% faster feature delivery | $5M+ annual value from time savings"
+      },
+      {
+        project: "Post-Call Analytics & Sentiment",
+        client: "BankUnited, Cardinal Finance",
+        situation: "Customer service teams manually reviewing 10,000+ calls monthly for quality, compliance, and sentiment, missing insights and delaying issue resolution.",
+        task: "Build GenAI-powered post-call analytics platform automatically transcribing, analyzing sentiment, extracting key insights, and flagging compliance risks from customer service calls.",
+        action: "Deployed Amazon Transcribe + Comprehend + custom LLM for call analytics, automated sentiment scoring and topic extraction, built real-time compliance alerts, created executive dashboards for trends",
+        result: "100% call coverage vs 5% manual | 90% reduction in QA time | 25% improvement in customer satisfaction | Real-time compliance monitoring"
+      },
+      {
+        project: "Enterprise Q&A Knowledge Chatbot",
+        client: "First Citizens Bank, Park National",
+        situation: "Employees spending 15-20 hours weekly searching for information across 1000+ internal documents, policies, and systems, reducing productivity and causing knowledge silos.",
+        task: "Build enterprise GenAI chatbot (RAG architecture) providing instant Q&A access to organizational knowledge base while maintaining security and compliance.",
+        action: "Implemented Amazon Bedrock with Retrieval Augmented Generation, indexed 10,000+ internal documents, established role-based access controls, deployed conversational UI across organization",
+        result: "80% reduction in knowledge search time | 15,000+ queries weekly | 92% answer accuracy | Several hours saved per employee weekly"
+      },
+      {
+        project: "Automated Claims & Policy Handling",
+        client: "Liberty Mutual",
+        situation: "Insurance claims processing requiring 5-7 days manual review of documents, causing customer frustration and operational inefficiency at scale.",
+        task: "Deploy GenAI for automated claims document extraction, validation, fraud detection, and policy recommendation to accelerate claims processing.",
+        action: "Built ML pipeline for document OCR + extraction, implemented fraud detection models, deployed policy matching algorithms, automated 70% of routine claims processing",
+        result: "70% claims auto-processed | 3-day reduction in processing time | $8M annual savings | 35% improvement in customer satisfaction"
+      },
+      {
+        project: "Predictive Lead Scoring & Email Triage",
+        client: "SoFi, Robinhood",
+        situation: "Sales teams manually prioritizing 50,000+ monthly leads and customer emails, missing high-value opportunities and slow response times.",
+        task: "Build ML-powered lead scoring and email triage system automatically prioritizing based on conversion probability and customer value.",
+        action: "Trained gradient boosting models on historical conversion data, implemented real-time scoring pipeline, built intelligent email routing system, integrated with CRM workflows",
+        result: "40% increase in conversion rates | 60% reduction in response time | $10M+ incremental sales | 50% improvement in sales team efficiency"
+      },
+      {
+        project: "Custom Economic Sentiment Pipeline",
+        client: "Victory Capital",
+        situation: "Investment analysts manually tracking economic indicators across 100+ sources, delaying market insights and investment decisions.",
+        task: "Build GenAI pipeline ingesting economic news, earnings calls, analyst reports to generate real-time sentiment analysis and market insights.",
+        action: "Deployed NLP models processing 10,000+ documents daily, built sentiment extraction and trend analysis, created real-time dashboard for investment teams, established alerts for market shifts",
+        result: "Real-time market insights vs 24-48 hour delay | 100+ data sources automated | 50% faster investment decisions | Competitive intelligence advantage"
+      },
+      {
+        project: "Risk Management Chatbot",
+        client: "ACI Worldwide, BankUnited",
+        situation: "Risk analysts spending 20+ hours weekly querying risk databases and generating compliance reports, delaying risk assessments.",
+        task: "Deploy conversational AI chatbot for natural language querying of risk databases, automated report generation, and compliance monitoring.",
+        action: "Built chatbot with SQL generation capabilities, integrated with enterprise risk data warehouse, implemented automated report generation, established audit trail for compliance",
+        result: "85% reduction in report generation time | Natural language access to risk data | Real-time compliance monitoring | $3M annual productivity value"
+      }
+    ]
+  };
+
   const impactStories = [
     {
       icon: Building2,
       client: "Amazon Web Services",
       title: "AWS Banking & AI Transformations",
-      situation: awsStories[awsSubTab].situation,
-      task: awsStories[awsSubTab].task,
-      action: awsStories[awsSubTab].action,
-      result: awsStories[awsSubTab].result,
-      metrics: awsStories[awsSubTab].metrics
+      situation: awsSubTab === 2 ? "" : awsStories[awsSubTab].situation,
+      task: awsSubTab === 2 ? "" : awsStories[awsSubTab].task,
+      action: awsSubTab === 2 ? [] : awsStories[awsSubTab].action,
+      result: awsSubTab === 2 ? "" : awsStories[awsSubTab].result,
+      metrics: awsSubTab === 2 ? [] : awsStories[awsSubTab].metrics
     },
     {
       icon: TrendingUp,
@@ -562,6 +664,16 @@ export default function ClientImpact() {
               >
                 First Citizens Bank - Cloud & AI
               </button>
+              <button
+                onClick={() => setAwsSubTab(2)}
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
+                  awsSubTab === 2
+                    ? "bg-executive-gold/20 text-executive-gold border border-executive-gold/50"
+                    : "bg-white/5 text-white/60 border border-white/10 hover:bg-white/10"
+                }`}
+              >
+                Generative AI Impact
+              </button>
             </div>
           )}
 
@@ -628,7 +740,7 @@ export default function ClientImpact() {
           )}
 
           {/* STAR Content - Main Story */}
-          {((activeTab === 0) || (activeTab === 1 && assurantSubTab === 0) || (activeTab === 2 && amexSubTab === 0)) && (
+          {((activeTab === 0 && awsSubTab !== 2) || (activeTab === 1 && assurantSubTab === 0) || (activeTab === 2 && amexSubTab === 0)) && (
             <div className="space-y-6">
             {/* Situation */}
             <div>
@@ -677,6 +789,99 @@ export default function ClientImpact() {
               <p className="text-white/90 leading-relaxed font-semibold">{currentStory.result}</p>
             </div>
           </div>
+          )}
+
+          {/* AWS GenAI Impact Content */}
+          {activeTab === 0 && awsSubTab === 2 && (
+            <div className="space-y-8">
+              {/* Header */}
+              <div className="text-center mb-8">
+                <h4 className="text-3xl font-bold text-executive-gold mb-3">{genAIImpact.title}</h4>
+                <p className="text-white/80 text-base leading-relaxed max-w-4xl mx-auto">{genAIImpact.overview}</p>
+              </div>
+
+              {/* Enterprise Metrics */}
+              <div className="bg-gradient-to-r from-executive-gold/20 to-primary-500/20 border-2 border-executive-gold/50 rounded-lg p-6 mb-8">
+                <h5 className="text-xl font-bold text-executive-gold mb-4">Enterprise-Scale Impact</h5>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="bg-white/5 p-4 rounded-lg">
+                    <div className="text-sm text-white/60 mb-1">Deployment</div>
+                    <div className="text-white font-semibold">{genAIImpact.enterpriseMetrics.deployment}</div>
+                  </div>
+                  <div className="bg-white/5 p-4 rounded-lg">
+                    <div className="text-sm text-white/60 mb-1">User Adoption</div>
+                    <div className="text-white font-semibold">{genAIImpact.enterpriseMetrics.adoption}</div>
+                  </div>
+                  <div className="bg-white/5 p-4 rounded-lg">
+                    <div className="text-sm text-white/60 mb-1">Productivity</div>
+                    <div className="text-white font-semibold">{genAIImpact.enterpriseMetrics.productivity}</div>
+                  </div>
+                  <div className="bg-white/5 p-4 rounded-lg">
+                    <div className="text-sm text-white/60 mb-1">Financial Impact</div>
+                    <div className="text-executive-gold font-bold text-lg">{genAIImpact.enterpriseMetrics.financial}</div>
+                  </div>
+                  <div className="bg-white/5 p-4 rounded-lg">
+                    <div className="text-sm text-white/60 mb-1">Strategic Investment</div>
+                    <div className="text-white font-semibold">{genAIImpact.enterpriseMetrics.investment}</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Projects Table */}
+              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
+                <h5 className="text-xl font-bold text-executive-gold mb-4">GenAI & ML Projects Portfolio (STAR Format)</h5>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-white/20">
+                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Project</th>
+                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Client</th>
+                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Situation</th>
+                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Task</th>
+                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Action</th>
+                        <th className="text-left py-3 px-4 text-sm font-bold text-executive-gold">Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {genAIImpact.projects.map((proj, idx) => (
+                        <tr key={idx} className="border-b border-white/10 hover:bg-white/5 transition-colors">
+                          <td className="py-4 px-4 text-white font-semibold text-sm align-top">{proj.project}</td>
+                          <td className="py-4 px-4 text-white/70 text-sm align-top">{proj.client}</td>
+                          <td className="py-4 px-4 text-white/70 text-sm align-top">{proj.situation}</td>
+                          <td className="py-4 px-4 text-white/70 text-sm align-top">{proj.task}</td>
+                          <td className="py-4 px-4 text-white/70 text-sm align-top">{proj.action}</td>
+                          <td className="py-4 px-4 text-executive-gold text-sm font-semibold align-top">{proj.result}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Key Highlights */}
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white/5 border border-white/10 rounded-lg p-6">
+                  <h5 className="text-lg font-bold text-executive-gold mb-3">Technology Stack</h5>
+                  <div className="space-y-2 text-sm text-white/80">
+                    <div>• Amazon Bedrock, SageMaker, Comprehend, Transcribe</div>
+                    <div>• GitHub Copilot Enterprise, AWS CodeWhisperer</div>
+                    <div>• RAG (Retrieval Augmented Generation)</div>
+                    <div>• Custom LLMs, NLP models, ML pipelines</div>
+                    <div>• Real-time analytics and sentiment analysis</div>
+                  </div>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-lg p-6">
+                  <h5 className="text-lg font-bold text-executive-gold mb-3">Use Case Domains</h5>
+                  <div className="space-y-2 text-sm text-white/80">
+                    <div>• Code generation & developer productivity</div>
+                    <div>• Customer service & post-call analytics</div>
+                    <div>• Enterprise knowledge management & Q&A</div>
+                    <div>• Claims automation & fraud detection</div>
+                    <div>• Risk management & compliance monitoring</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           )}
 
           {/* Assurant TOGAF ADM Content */}
@@ -969,7 +1174,7 @@ export default function ClientImpact() {
           )}
 
           {/* Key Metrics */}
-          {((activeTab === 0) || (activeTab === 1 && assurantSubTab === 0) || (activeTab === 2 && amexSubTab === 0)) && (
+          {((activeTab === 0 && awsSubTab !== 2) || (activeTab === 1 && assurantSubTab === 0) || (activeTab === 2 && amexSubTab === 0)) && (
           <div className="mt-8 pt-6 border-t border-white/10">
             <div className="grid grid-cols-3 gap-6">
               {currentStory.metrics.map((metric, idx) => (
