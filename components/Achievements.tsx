@@ -103,7 +103,7 @@ export default function Achievements() {
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold gold-accent mb-2">20K+</div>
-              <div className="text-white/70">Users Enabled</div>
+              <div className="text-white/70">Vibe coders enabled</div>
             </div>
           </div>
         </div>

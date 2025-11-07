@@ -25,7 +25,6 @@ export default function Navigation() {
     { href: "#blog-press", label: "Blog & Press" },
     { href: "#testimonials", label: "Testimonials" },
     { href: "#education", label: "Education" },
-    { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -37,19 +36,14 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <a href="#" className="text-2xl font-serif font-bold">
-            <span className="gold-accent">Adarsh</span> Naidu
-          </a>
-
+        <div className="flex justify-center items-center py-4">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-6 lg:space-x-10 xl:space-x-12">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-executive-gold transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-executive-gold transition-colors duration-300 font-medium whitespace-nowrap px-1"
               >
                 {link.label}
               </a>

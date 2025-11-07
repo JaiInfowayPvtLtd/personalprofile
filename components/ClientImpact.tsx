@@ -29,7 +29,11 @@ export default function ClientImpact() {
         { value: "40%", label: "Deposit Growth YoY" },
         { value: "$50M+", label: "Incremental Deposits" },
         { value: "25%", label: "Targeting Accuracy" }
-      ]
+      ],
+      reference: {
+        name: "Julio Jogaib",
+        linkedinUrl: "https://www.linkedin.com/in/juliojogaib/"
+      }
     },
     {
       client: "First Citizens Bank",
@@ -53,7 +57,11 @@ export default function ClientImpact() {
         { value: "197", label: "Controls Across 17 Domains" },
         { value: "50+", label: "Cloud Services Enabled" },
         { value: "6", label: "AI Services Architected" }
-      ]
+      ],
+      reference: {
+        name: "Kojo",
+        linkedinUrl: "https://www.linkedin.com/in/kojoi/"
+      }
     }
   ];
 
@@ -153,23 +161,27 @@ export default function ClientImpact() {
       situation: "Assurant faced fragmented API landscape with 45+ business applications and 70+ technology platforms operating in silos, lacking standardization, governance, and self-service capabilities. API sprawl led to inefficiencies, security vulnerabilities, duplication of effort, and inability to monetize digital assets or enable partner ecosystems.",
       task: "Lead comprehensive APIM (API Management) transformation establishing API-first architecture and 'API as a Product' operating model. Create enterprise-wide governance frameworks, self-service developer portals, and monetization strategies to enable digital innovation, partner integration, and operational excellence across the organization.",
       action: [
-        "Architected enterprise API management platform using AWS API Gateway, Azure APIM, and Kong for unified API lifecycle management",
-        "Established API-first architecture principles and design standards aligned with REST, GraphQL, and event-driven patterns",
-        "Designed 'API as a Product' operating model with product ownership, versioning, SLAs, and deprecation policies",
-        "Built comprehensive governance framework covering API design standards, security policies (OAuth 2.0, JWT), and compliance controls",
-        "Created self-service developer portal with API catalog, interactive documentation (OpenAPI/Swagger), sandbox environments, and onboarding workflows",
-        "Implemented API monetization strategy with usage-based pricing models, subscription tiers, and partner billing integration",
-        "Established API analytics and observability platform tracking usage metrics, performance KPIs, error rates, and business value",
-        "Developed CI/CD pipelines for automated API testing, deployment, and lifecycle management across 45+ applications",
-        "Built API security layer with rate limiting, threat detection, PII masking, and compliance validation (SOC2, PCI-DSS)",
-        "Conducted enterprise-wide API enablement program training 200+ developers on API design, consumption, and best practices"
+        "Architected enterprise Azure API Management (APIM) platform with Premium tier multi-region deployment for unified API lifecycle management across 45+ applications and 70+ technology platforms",
+        "Configured Azure APIM policies for API-first architecture supporting REST, GraphQL, and event-driven patterns with transformation, validation, and routing capabilities",
+        "Designed 'API as a Product' operating model in Azure APIM with product grouping, subscription management, versioning strategies, and SLA enforcement policies",
+        "Built comprehensive governance framework using Azure APIM policies covering API design standards, OAuth 2.0/JWT authentication, rate limiting, and PCI-DSS/SOC2 compliance controls",
+        "Created self-service Azure Developer Portal with customized branding, API catalog, interactive documentation (OpenAPI/Swagger integration), sandbox environments, and automated onboarding workflows",
+        "Implemented API monetization strategy leveraging Azure APIM subscription tiers, usage quotas, billing integration with Azure Cost Management, and partner revenue tracking",
+        "Established API analytics and observability using Azure Monitor, Application Insights, and custom dashboards tracking usage metrics, performance KPIs, error rates, and business value",
+        "Developed CI/CD pipelines using Azure DevOps for automated API testing, APIM policy deployment, and lifecycle management across environments with ARM templates and Infrastructure-as-Code",
+        "Built API security layer in Azure APIM with rate limiting policies, IP filtering, threat detection via Azure Security Center, PII masking transformations, and certificate-based authentication",
+        "Conducted enterprise-wide Azure APIM enablement program training 200+ developers on API design standards, portal consumption, policy authoring, and best practices"
       ],
       result: "35% efficiency boost in integration development | Enterprise-wide API standardization across 45+ apps and 70+ platforms | Developer enablement platform reducing time-to-integration by 50% | 80% reduction in duplicate API development | Self-service portal enabling 500+ API consumers | Established foundation for partner ecosystem and B2B revenue streams | 99.9% API uptime with automated monitoring and alerting",
       metrics: [
         { value: "35%", label: "Efficiency Improvement" },
         { value: "115", label: "Apps & Platforms Unified" },
         { value: "500+", label: "API Consumers Enabled" }
-      ]
+      ],
+      reference: {
+        name: "Cory Mattson",
+        linkedinUrl: "https://www.linkedin.com/in/corymattson/"
+      }
     },
     {
       icon: Cloud,
@@ -395,7 +407,7 @@ export default function ClientImpact() {
       }
     ],
     roleMapping: [
-      { togafRole: "Architecture Board", amexRole: "CEO, CTO, CRO, CISO, VPs" },
+      { togafRole: "Architecture Board", amexRole: "CTO, CRO, CISO, VPs" },
       { togafRole: "Lead Enterprise Architect / Chief Architect", amexRole: "Adarsh Naidu (Chief Architect)" },
       { togafRole: "Business Architect", amexRole: "VP Product (Mobile, Retail, Housing, Automotive)" },
       { togafRole: "Data Architect", amexRole: "Enterprise Data Architects (Master DB, HOIVerify, Real-Time Integration)" },
@@ -1159,6 +1171,27 @@ export default function ClientImpact() {
                   <div className="text-sm text-white/60">{metric.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+          )}
+
+          {/* Reference */}
+          {((activeTab === 0 && awsSubTab !== 2 && awsStories[awsSubTab].reference) ||
+            (activeTab === 1 && assurantSubTab === 0 && currentStory.reference)) && (
+          <div className="mt-6 pt-6 border-t border-white/10">
+            <div className="flex items-center justify-center gap-2 text-white/70">
+              <span className="text-sm">Reference:</span>
+              <a
+                href={activeTab === 0 ? awsStories[awsSubTab].reference?.linkedinUrl : currentStory.reference?.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-executive-gold hover:text-executive-gold/80 transition-colors flex items-center gap-1"
+              >
+                {activeTab === 0 ? awsStories[awsSubTab].reference?.name : currentStory.reference?.name}
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
             </div>
           </div>
           )}

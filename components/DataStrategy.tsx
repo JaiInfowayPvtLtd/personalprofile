@@ -102,22 +102,6 @@ export default function DataStrategy() {
             );
           })}
         </div>
-
-        {/* Key Outcomes */}
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className="glass-card text-center bg-gradient-to-br from-executive-gold/5 to-transparent">
-            <div className="text-3xl font-bold gold-accent mb-2">$200M+</div>
-            <div className="text-white/70 text-sm">Annual Revenue Impact</div>
-          </div>
-          <div className="glass-card text-center bg-gradient-to-br from-executive-gold/5 to-transparent">
-            <div className="text-3xl font-bold gold-accent mb-2">50+</div>
-            <div className="text-white/70 text-sm">Enterprise Implementations</div>
-          </div>
-          <div className="glass-card text-center bg-gradient-to-br from-executive-gold/5 to-transparent">
-            <div className="text-3xl font-bold gold-accent mb-2">20K+</div>
-            <div className="text-white/70 text-sm">Users Enabled</div>
-          </div>
-        </div>
       </div>
     </section>
   );
